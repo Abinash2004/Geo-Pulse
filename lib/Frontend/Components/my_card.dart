@@ -5,7 +5,7 @@ class MyCard extends StatelessWidget {
   final String title;
   final IconData icon;
 
-  MyCard({required this.title, required this.icon});
+  const MyCard({super.key, required this.title, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class MyCard extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 17, 
                 fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).colorScheme.surface,
               ),
             ),
           ],

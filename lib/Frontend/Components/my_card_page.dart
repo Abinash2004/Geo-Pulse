@@ -40,13 +40,56 @@ class _CardPageState extends State<CardPage> {
         title: Text(MyApp.name,
             style: GoogleFonts.poppins(
               color: Theme.of(context).colorScheme.surface,
-              fontWeight: FontWeight.w600, // You can also use FontWeight.w500, w600, etc.
+              fontWeight: FontWeight
+                  .w600, // You can also use FontWeight.w500, w600, etc.
             )),
         actions: [
           IconButton(
-            icon: Icon(Icons.logout,color: Theme.of(context).colorScheme.surface), // Icon for notifications
+            icon: Icon(Icons.logout,
+                color: Theme.of(context)
+                    .colorScheme
+                    .surface), // Icon for notifications
             onPressed: () {
-              logout(context);
+              //-----CHANGES MADE FROM HERE----
+              showDialog(
+                  barrierDismissible: false,
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      titleTextStyle: const TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20,
+                      ),
+                      title: const Text(
+                        "Logout?",
+                        style: TextStyle(
+                          //----change the font here-----
+                          fontSize: 24,
+                          color: Colors.black,
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text(
+                              "No",
+                              style: TextStyle(fontSize: 22, color: Colors.red),
+                            )),
+                        TextButton(
+                            onPressed: () {
+                              logout(context);
+                            },
+                            child: const Text(
+                              "Yes",
+                              style:
+                                  TextStyle(fontSize: 22, color: Colors.green),
+                            ))
+                      ],
+                    );
+                  });
+              //------TO HERE-------
             },
           ),
         ],

@@ -5,7 +5,7 @@ import 'package:motion_tab_bar/MotionTabBar.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
 
 class MyBottomNav extends StatefulWidget {
-  const MyBottomNav({Key? key}) : super(key: key);
+  const MyBottomNav({super.key});
 
   @override
   _MyBottomNavState createState() => _MyBottomNavState();

@@ -14,15 +14,13 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(
-    MultiProvider(
-      providers: [
-        //theme provider
-        ChangeNotifierProvider(create: (context) => ThemeProvider()),
-      ],
-      child: const MyApp(),
-    )
-  );
+  runApp(MultiProvider(
+    providers: [
+      //theme provider
+      ChangeNotifierProvider(create: (context) => ThemeProvider()),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -49,7 +47,9 @@ class MyApp extends StatelessWidget {
               future: fetchUserData(),
               builder: (context, userSnapshot) {
                 if (userSnapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(child: CircularProgressIndicator(strokeWidth: 5)); // Show a loading indicator
+                  return const Center(
+                      child: CircularProgressIndicator(
+                          strokeWidth: 5)); // Show a loading indicator
                 }
                 if (MyApp.user == "admin") {
                   return const AdminHomePage();
