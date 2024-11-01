@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104320552411",
+    "project_id": "geo-pulse-sih",
+    "storage_bucket": "geo-pulse-sih.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104320552411:android:afa33e5aeec5150a586bfe",
+        "android_client_info": {
+          "package_name": "com.example.geo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChfNL7YK16Mc7nNuGLA7A0BLkyr5mZF9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

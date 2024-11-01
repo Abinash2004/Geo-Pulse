@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.geopulse"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.example.geo" // Specify your own unique Application ID
+        minSdkVersion 23 // Update to minimum SDK version 23 for firebase_auth compatibility
+        targetSdkVersion 33 // Update this as per your project's requirements
+        versionCode 1 // Set this to your current app version code
+        versionName "1.0" // Set this to your current app version name
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
