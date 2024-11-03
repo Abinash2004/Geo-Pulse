@@ -48,12 +48,6 @@ Future<void> fetchUserData() async {
     MyApp.user = databaseSnapshot.child('user').value.toString();
     MyApp.userID = databaseSnapshot.child('userID').value.toString();
 
-    print(MyApp.email);
-    print(MyApp.name);
-    print(MyApp.user);
-    print(MyApp.userID);
-    print(MyApp.phone);
-
   }
 } on FirebaseException catch (e) {
   print(e.message);

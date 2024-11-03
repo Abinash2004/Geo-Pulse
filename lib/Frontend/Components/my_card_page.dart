@@ -107,6 +107,7 @@ class _CardPageState extends State<CardPage> {
           itemBuilder: (context, index) {
             final option = cardOptions[index];
             return MyCard(
+              index: index.toString(), // Change - index is sent to the MyCard widget for separate functionality
               title: option["title"]!,
               icon: option["icon"]!,
             );
