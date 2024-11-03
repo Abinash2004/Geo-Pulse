@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:geopulse/Frontend/Components/my_bottom_nav.dart';
+import 'package:geopulse/Frontend/Components/Home/my_bottom_nav.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

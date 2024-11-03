@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:geopulse/Frontend/Components/my_card_page.dart';
+import 'package:geopulse/Frontend/Components/Home/my_card_page.dart';
+import 'package:geopulse/Frontend/Employee%20Pages/Profile_Page.dart';
+import 'package:geopulse/Frontend/Employee%20Pages/Setting_page.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:motion_tab_bar/MotionTabBar.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
@@ -45,8 +48,8 @@ class _MyBottomNavState extends State<MyBottomNav> with TickerProviderStateMixin
         physics: const NeverScrollableScrollPhysics(),
         children: const [
           CardPage(),
-          Center(child: Text("Profile", style: TextStyle(fontSize: 24))),
-          Center(child: Text("Settings Page", style: TextStyle(fontSize: 24))),
+          Profilepage(),
+          SettingPage(),
         ],
       ),
       bottomNavigationBar: MotionTabBar(

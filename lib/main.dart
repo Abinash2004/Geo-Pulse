@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:geopulse/Backend/authentication.dart';
 import 'package:geopulse/Frontend/Admin%20Pages/admin_home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:geopulse/Frontend/Components/Account/Media_Service.dart';
 import 'package:geopulse/Frontend/Employee%20Pages/my_home_page.dart';
 import 'package:geopulse/Frontend/sign_in_page.dart';
 import 'package:geopulse/Frontend/Themes/color_palette.dart';
+import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
@@ -14,6 +16,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  final GetIt getIt=GetIt.instance;
+  getIt.registerSingleton<MediaService>(MediaService());
   runApp(MultiProvider(
     providers: [
       //theme provider

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geopulse/Backend/geo_fencing.dart';
+import 'package:geopulse/Frontend/Employee%20Pages/CheckOut_form.dart';
+import 'package:geopulse/Frontend/Employee%20Pages/Checkin_form.dart';
 import 'package:geopulse/Frontend/Employee%20Pages/check_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -78,8 +80,34 @@ class _MyCardState extends State<MyCard> {
       // onTap added for check-in functionality
       onTap: () {
         print("Card Index: ${widget.index}");
+        switch(widget.index) {
+          case "0": {
+            checkIn(context);
+            break;
+          }
+          case "1": {
+            print("index: 5");
+            break;
+          }
+          case "2": {
+            Navigator.push(context,MaterialPageRoute(builder: (context) => const CheckinForm()));
+            break;
+          }
+          case "3": {
+            Navigator.push(context,MaterialPageRoute(builder: (context) => const CheckOut()));
+            break;
+          }
+          case "4": {
+            print("index: 4");
+            break;
+          }
+          case "5": {
+            print("index: 5");
+            break;
+          }
+          
+        }
         if (widget.index == "0") {
-          checkIn(context);
         }
       },
       borderRadius:

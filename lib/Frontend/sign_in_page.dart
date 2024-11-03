@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geopulse/Backend/authentication.dart';
-import 'package:geopulse/Frontend/Components/my_button.dart';
-import 'package:geopulse/Frontend/Components/my_textfield.dart';
+import 'package:geopulse/Frontend/Components/Home/my_button.dart';
+import 'package:geopulse/Frontend/Components/Account/my_textfield.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MySignIn extends StatefulWidget {
